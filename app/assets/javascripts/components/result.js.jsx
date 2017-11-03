@@ -23,7 +23,6 @@ class Result extends React.Component {
           bitstamp: data.bitstamp,
           bitfinex: data.bitfinex
         });
-        console.log(data);
       }
     });
   }
