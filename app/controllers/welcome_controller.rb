@@ -4,6 +4,9 @@ class WelcomeController < ApplicationController
     @result = {'bitstamp' => Bitstamp.ticker,
                'bitfinex' => Bitfinex.ticker}
 
-    render plain: @result
+    respond_to do |format|
+      format.html
+      format.json { render json: @result }
+    end
   end
 end
